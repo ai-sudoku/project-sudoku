@@ -8,7 +8,8 @@ import time
 import argparse
 
 def call_clingo(clingo, input_names, timeout):
-    cmd = [clingo, "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-variable-unbounded", "--warn=no-global-variable", "--outf=2"] + input_names
+    # cmd = [clingo, "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-variable-unbounded", "--warn=no-global-variable", "--outf=2"] + input_names
+    cmd = [ clingo, "--warn=none", "--outf=2" ] + input_names # new for Classroom 50
     start = time.time()
     output = run(cmd, stdout=PIPE, stderr=PIPE, timeout=timeout)
     end = time.time()
