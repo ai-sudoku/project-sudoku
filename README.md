@@ -7,18 +7,16 @@ To submit your solution, please modify the file [sudoku.lp](asp/sudoku.lp) of th
 Every time you push a new commit, your solution will be tested automatically.
 The timeout per instance is `100` seconds, and
 the actual command call for the test is:
-* ``python3.8 asp/test.py -e asp/sudoku.lp -i asp/instances -s asp/solutions -t 100``
+* ``python3 asp/test.py -e asp/sudoku.lp -t 100``
 
-For help, type `python3.8 asp/test.py --help`.
+For help, type `python3 asp/test.py --help`.
 
-After a few minutes you will be able to see the result of the test in the **Actions** tab.
-You can get more information about the result of the test by clicking successively on:
-1. The specific test.
-2. "Autograding".
-3. "Run education/autograding@v1".
+After a few minutes you will be able to see the result of the test in the **Actions** tab:
+* Click on the test/workflow run.
+* Scroll to the section "grade/grade summary".
+* Check the result in the table ("PASS" or "FAIL").
 
-Then scroll down until around line 150.
-For each instance, you will see if the test is a:
+In case of a "FAIL", click on "Failure details" to see the test outcome for each instance:
 * "success" (correct answer),
 * "failure" (wrong answer),
 * "timeout" (no solution found before the time runs out), or
